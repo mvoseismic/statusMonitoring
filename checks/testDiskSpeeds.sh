@@ -5,9 +5,8 @@
 # R.C. Stewart, 2025-06-19
 
 disks=( /mnt/mvofls2/Seismic_Data/tmp /mnt/mvofls3/Imagery_Data/tmp /mnt/mvohvs3/MVOSeisD6/tmp )
-#disks=( /mnt/mvofls2/Seismic_Data/tmp )
 
-DATADIR1="/home/seisan/data/statusMVOmonitoring/data/network"
+DATADIR1="/home/seisan/data/statusMonitoring/network"
 DATADIR2="/mnt/mvofls2/Seismic_Data/monitoring_data/statusMVOmonitoring/data/network"
 
 for i in "${disks[@]}"
@@ -27,4 +26,4 @@ do
 
 done
 
-cp ${DATADIR1}/*.txt ${DATADIR2}
+#cp ${DATADIR1}/*.txt ${DATADIR2}

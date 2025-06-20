@@ -18,12 +18,13 @@ MVOFLS2='/mnt/mvofls2/Seismic_Data'
 
 # local system
 date -u
+hostname
 echo ''
 echo ''
 
 
 # winston1
-matches=("all" "w1" "win1" "winston1")
+matches=("all" "winston1")
 if [[ "${matches[@]}" =~ "${WHAT}" ]]; then
 
 	echo '- winston1 ---------------------------------------------------------------------------------------------'
@@ -43,13 +44,13 @@ if [[ "${matches[@]}" =~ "${WHAT}" ]]; then
 	echo ''
 
 	echo 'winston wave server'
-	ssh wwsuser@172.17.102.60 systemctl status wws | head -3
-	ssh wwsuser@172.17.102.60 systemctl status importew | head -3
+	ssh wwsuser@172.17.102.60 systemctl status wws | dos2unix | head -3
+	ssh wwsuser@172.17.102.60 systemctl status importew | dos2unix | head -3
 	echo ''
 
-#	echo 'earthworm status'
-#	ssh -tt wwsuser@172.17.102.60 'bash -l -c "source /home/wwsuser/earthworm/run_mvo/params/ew_linux.bash; /home/wwsuser/earthworm/earthworm_7.10/bin/status 2>/dev/null | tail +4 | head -n -1"' 2>/dev/null
-#	echo ''
+	echo 'earthworm status'
+	ssh -tt wwsuser@172.17.102.60 'bash -l -c "source /home/wwsuser/earthworm/run_mvo/params/ew_linux.bash; /home/wwsuser/earthworm/earthworm_7.10/bin/status 2>/dev/null | tail +4 | head -n -1"' 2>/dev/null
+	echo ''
 
 	echo 'tmp files in run_mvo/params'
 	ssh wwsuser@172.17.102.60 ls -ltr /home/wwsuser/earthworm/run_mvo/params/tmp.* | tee >(wc -l) | tail -3
@@ -58,13 +59,30 @@ if [[ "${matches[@]}" =~ "${WHAT}" ]]; then
 	echo 'last three continuous data files'
 	ssh wwsuser@172.17.102.60 ls -ltr /home/mvo/data/rbuffers/*.msd | tail -3
 	echo ''
+
 	echo ''
 
 fi
 
 
+# earthworm3
+matches=("all" "earthworm3")
+if [[ "${matches[@]}" =~ "${WHAT}" ]]; then
+
+	echo '- earthworm3 -------------------------------------------------------------------------------------------'
+	echo ''
+
+	echo 'last three triggered event data files'
+	ls -l /mnt/earthworm3/monitoring_data/events/*MV* | tail -3
+	echo ''
+
+    echo ''
+
+fi
+
+
 # mvofls2
-matches=("all" "fls2" "mvofls2")
+matches=("all" "mvofls2")
 if [[ "${matches[@]}" =~ "${WHAT}" ]]; then
 
 	echo '- mvofls2 ----------------------------------------------------------------------------------------------'
@@ -75,23 +93,11 @@ if [[ "${matches[@]}" =~ "${WHAT}" ]]; then
 	echo ''
 
 	echo 'last three triggered event data files'
-	ls -l ${MVOFLS2}/monitoring_data/events/ | tail -3
-	echo ''
-	echo ''
-
-
-fi
-
-# earthworm3
-matches=("all" "ew3" "earthworm3")
-if [[ "${matches[@]}" =~ "${WHAT}" ]]; then
-
-	echo '- earthworm3 -------------------------------------------------------------------------------------------'
+	ls -l ${MVOFLS2}/monitoring_data/events/*MV* | tail -3
 	echo ''
 
-	echo 'last three triggered event data files'
-	ls -l /mnt/earthworm3/monitoring_data/events/ | tail -3
 	echo ''
 
 
 fi
+
