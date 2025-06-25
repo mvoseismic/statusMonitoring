@@ -3,7 +3,7 @@
 A badly-organised collection of software to monitor the performance and status of the MVO seismic monitoring system.
 
 * Most scripts are stored on *ospproc3* in *~/src/statusMonitoring* and copied to *~/src/statusMonitoring* on other computers where necessaary.
-* All scripts are notmally run by *cron*.
+* All scripts are normally run by *cron*.
 * Data is stored on individual computers in *~/data/statusMonitoring*.
 * All locally-held data is rsynced to */mnt/mvofls2/Seismic_data/monitoring_data/statusMonitoring*.
 
@@ -24,7 +24,18 @@ Scripts to check various things.
 * Runs once a day.
 * Plot results using *testDiskSpeeedsPlot.m*.
 
+## ~/src/statusMonitoring/earthworm
 
+Scripts to check earthworm.
+
+### earthworm_status.pl
+
+* Runs the *status* command with extra output.
+
+### getSniffwave.sh
+
+* Runs sniffwave with outrput to a text file for later analysis.
+*
 ## Author
 
 Roderick Stewart, Dormant Services Ltd
