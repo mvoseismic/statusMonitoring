@@ -27,7 +27,18 @@ Scripts to check various things.
 ## ~/src/statusMonitoring/earthworm
 
 * Scripts to check earthworm.
-* Runs as cronjobs on *winston1* and *winston2*.
+* Run as cronjobs on *winston1* and *winston2*.
+```
+# earthworm status
+*/5 * * * * /home/wwsuser/src/statusMonitoring/earthworm/earthworm_status.pl > /home/wwsuser/data/statusMonitoring/earthworm/status-winston1.txt 2>&1
+
+# earthworm sniffwave
+0 0 * * * /home/wwsuser/src/statusMonitoring/src/earthworm/getSniffwave.sh > /dev/null 2&>1
+
+@reboot /home/wwsuser/data/statusMVOmonitoring/src/earthworm/getSniffwave.sh > /dev/null 2&>1
+
+```
+
 
 ### earthworm_status.pl
 
@@ -48,6 +59,7 @@ Scripts to check various things.
 ```
 # nmap scan of 172.17.102 network
 0 8 * * * /home/seisan/src/nmap/nmap_cron.sh 2>&1
+```
 ## Author
 
 Roderick Stewart, Dormant Services Ltd
