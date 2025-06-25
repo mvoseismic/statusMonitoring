@@ -30,12 +30,12 @@ Scripts to check earthworm.
 
 ### earthworm_status.pl
 
-* Runs the *status* command with extra output.
+* Runs the *status* command for output to a text file.
 
 ### getSniffwave.sh
 
-* Runs sniffwave with outrput to a text file for later analysis.
-*
+* Runs sniffwave with output to a text file for later analysis.
+
 ## Author
 
 Roderick Stewart, Dormant Services Ltd
