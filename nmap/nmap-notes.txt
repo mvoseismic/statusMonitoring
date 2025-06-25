@@ -1,0 +1,4 @@
+to get html of basic scan
+$ nmap 172.17.102.0-255 -oX - | xsltproc -html - > nmap.html
+
+

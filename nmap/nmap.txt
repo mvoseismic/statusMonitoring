@@ -1,0 +1,207 @@
+# Nmap 7.80 scan initiated Thu Aug  5 13:17:07 2021 as: nmap -oN nmap.txt 172.17.102.0-255
+Nmap scan report for opsrm04 (172.17.102.4)
+Host is up (0.00033s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for opsrm06 (172.17.102.6)
+Host is up (0.00022s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for opsproc1 (172.17.102.11)
+Host is up (0.00022s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+5357/tcp open  wsdapi
+
+Nmap scan report for opsproc2 (172.17.102.12)
+Host is up (0.00021s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for opsproc3.mvo.ms (172.17.102.13)
+Host is up (0.00018s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+7070/tcp open  realserver
+
+Nmap scan report for mbfl (172.17.102.21)
+Host is up (0.0024s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+4242/tcp open  vrml-multi-use
+
+Nmap scan report for mbly (172.17.102.27)
+Host is up (0.0030s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+4242/tcp open  vrml-multi-use
+
+Nmap scan report for 172.17.102.31
+Host is up (0.0016s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 172.17.102.32
+Host is up (0.00026s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 172.17.102.33
+Host is up (0.0033s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 172.17.102.34
+Host is up (0.00020s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 172.17.102.50
+Host is up (0.00020s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+5357/tcp open  wsdapi
+
+Nmap scan report for 172.17.102.51
+Host is up (0.00021s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for winston1 (172.17.102.60)
+Host is up (0.00061s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3306/tcp open  mysql
+
+Nmap scan report for earthworm02 (172.17.102.61)
+Host is up (0.00026s latency).
+Not shown: 991 closed ports
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+3306/tcp  open  mysql
+3389/tcp  open  ms-wbt-server
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49156/tcp open  unknown
+
+Nmap scan report for earthworm03 (172.17.102.62)
+Host is up (0.00053s latency).
+Not shown: 986 closed ports
+PORT      STATE SERVICE
+22/tcp    open  ssh
+23/tcp    open  telnet
+135/tcp   open  msrpc
+445/tcp   open  microsoft-ds
+3000/tcp  open  ppp
+3306/tcp  open  mysql
+3389/tcp  open  ms-wbt-server
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49156/tcp open  unknown
+49157/tcp open  unknown
+49163/tcp open  unknown
+
+Nmap scan report for mvoscream2 (172.17.102.63)
+Host is up (0.00045s latency).
+Not shown: 992 closed ports
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+3389/tcp  open  ms-wbt-server
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+
+Nmap scan report for mvoscream3 (172.17.102.64)
+Host is up (0.00023s latency).
+Not shown: 988 closed ports
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+445/tcp   open  microsoft-ds
+3001/tcp  open  nessus
+3389/tcp  open  ms-wbt-server
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49156/tcp open  unknown
+49157/tcp open  unknown
+49159/tcp open  unknown
+49160/tcp open  unknown
+
+Nmap scan report for seiscomp1 (172.17.102.65)
+Host is up (0.00041s latency).
+All 1000 scanned ports on seiscomp1 (172.17.102.65) are closed
+
+Nmap scan report for mvofls2 (172.17.102.66)
+Host is up (0.00023s latency).
+Not shown: 998 closed ports
+PORT    STATE SERVICE
+135/tcp open  msrpc
+445/tcp open  microsoft-ds
+
+Nmap scan report for 172.17.102.67
+Host is up (0.00036s latency).
+Not shown: 988 closed ports
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+3389/tcp  open  ms-wbt-server
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49156/tcp open  unknown
+49157/tcp open  unknown
+49158/tcp open  unknown
+49159/tcp open  unknown
+
+Nmap scan report for 172.17.102.126
+Host is up (0.00093s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+# Nmap done at Thu Aug  5 13:17:16 2021 -- 256 IP addresses (22 hosts up) scanned in 9.24 seconds
