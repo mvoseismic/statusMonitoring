@@ -26,7 +26,8 @@ Scripts to check various things.
 
 ## ~/src/statusMonitoring/earthworm
 
-Scripts to check earthworm.
+* Scripts to check earthworm.
+* Runs as cronjobs on *winston1* and *winston2*.
 
 ### earthworm_status.pl
 
