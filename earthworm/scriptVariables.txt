@@ -1,2 +1,2 @@
-dirData="~/data/statusMonitoring/sniffwave"
+dirData="~/data/statusMonitoring"
 dirConfig="../config"
