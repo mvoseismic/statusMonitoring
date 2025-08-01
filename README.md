@@ -60,6 +60,18 @@ Scripts to check various things.
 # nmap scan of 172.17.102 network
 0 8 * * * /home/seisan/src/nmap/nmap_cron.sh 2>&1
 ```
+
+## ~/src/statusMonitoring/wws
+
+### wwsLatestData.pl
+
+* Gets timestamp of latest data on winston wave server
+* Run as cronjob on *opsproc3*.
+```
+# Latest data on WWS
+*/5 * * * * cd /home/src/statusMonitoring/wws; ./wwsLatestData.pl winston1 > /hom/seisan/data/statusMonitoring/wws/wwsLatestData-winston1.txt
+```
+
 ## Author
 
 Roderick Stewart, Dormant Services Ltd

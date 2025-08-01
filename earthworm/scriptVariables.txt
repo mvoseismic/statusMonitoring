@@ -1,2 +1,2 @@
-dirData="~/data/statusMonitoring"
+dirData="/home/wwsuser/data/statusMonitoring"
 dirConfig="../config"

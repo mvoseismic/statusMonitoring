@@ -1,14 +1,14 @@
 MBBY    172.17.102.20   radian  HH
 MBFL    172.17.102.21   radian  HH
 MBFR    172.17.102.22   radian  HH
-#MBGB    172.17.102.23   radian  HH
+MBGB    172.17.102.23   radian  HH
 MBGH    172.17.102.24   radian  HH
 MBLG    172.30.0.79     radian  HH
 MBLY    172.17.102.27   radian  HH
-#MBHA    172.30.0.12     dm24    SH
+MBHA    172.30.0.12     radian  HH
 MBRV    172.17.102.31   dm24    BH
-MBRY    172.30.0.11     dm24    BH
-MBWH    172.17.102.29   radian  BH
+MBRY    172.30.0.13     dm24    BH
+MBWH    172.17.102.29   radian  HH
 MSS1    none            spider  SH
 #camMVOT 172.17.103.10   camera
 #camGARI 172.17.103.11   camera
