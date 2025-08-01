@@ -10,10 +10,13 @@ use warnings;
 use LWP::Simple;
 use HTML::Restrict;
 use Time::Piece;
+use feature 'say';
 
 if ( not defined $ARGV[0] ){
     die "Needs argument";
 }
+
+my $fifo = 'pulseway.fifo';
 
 my $ip;
 if( $ARGV[0] eq 'winston1' ) {
@@ -60,8 +63,27 @@ while (my $row = <$fh>) {
 
     my $diff = $t2 - $t1;
 
-    if( $diff > 14400 ){
-        print "$scnl    $datim   $diff   MORE THAN FOUR HOURS OLD\n";
+    if( $diff > 3600 ){
+        my $oldHours = $diff / 3600;
+        my $oldDays = $oldHours / 24.0;
+        my $message;
+        if( $oldHours < 72 ) {
+            $message = sprintf( "%4.1f hours old", $oldHours );
+        } else {
+            $message = sprintf( "%4.1f days old", $oldDays );
+        }
+        print "$scnl    $datim   $diff   $message\n";
+
+        # Message to named pipe
+        #if (-e $fifo) { unlink $fifo  or die "Can't unlink $fifo: $!" }
+        #system('mkfifo', $fifo) and system('mknod', $fifo, 'p') 
+        #    and die "Can't make $fifo: $!";
+        #open my $fh, '>', $fifo or die "Can't open fifo $fifo: $!";  # Blocks here until
+        #say $fh "Old data $sta";                           # there's a reader
+        #close $fh;
+        #unlink $fifo or die "Error unlinking $fifo: $!"; 
+        
+
     } else {
         print "$scnl    $datim   $diff\n";
     }
