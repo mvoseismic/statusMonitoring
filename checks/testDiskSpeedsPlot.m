@@ -2,8 +2,8 @@ close all;
 clear;
 setup = setupGlobals();
 
-fileNetworkSpeedsRead = fullfile( setup.DirStatusMonitoring, 'network', 'network_disks_read_speed.txt' );
-fileNetworkSpeedsWrite = fullfile( setup.DirStatusMonitoring, 'network', 'network_disks_write_speed.txt' );
+fileNetworkSpeedsRead = fullfile( setup.DirStatusMonitoring, 'network', 'speed', 'network_disks_read_speed.txt' );
+fileNetworkSpeedsWrite = fullfile( setup.DirStatusMonitoring, 'network', 'speed', 'network_disks_write_speed.txt' );
 
 NSR = readtable( fileNetworkSpeedsRead );
 readWhen = datetime( NSR.Var1, 'ConvertFrom', 'posixtime');
@@ -29,7 +29,11 @@ allDisks = [ readDisk; writeDisk ];
 disks = fileparts( unique( allDisks ) );
 nDisks = length( disks);
 
-figure;
+if strcmp( setup.Mode, 'batch' )
+    figure('visible','off');;
+else
+    figure;
+end
 figure_size( 'l' );
 tiledlayout( 'vertical' );
 
@@ -51,4 +55,9 @@ for iDisk=1:length(disks)
     ylabel( 'MB/s' );
     legend( {'Read speed', 'Write speed'}, 'Location', 'northwest' );
     xlim( tLimits );
+end
+
+if strcmp( setup.Mode, 'batch' )
+    fileSave = fullfile( setup.DirStatusMonitoring, 'network', 'speed', 'fig-network_disks_speeds.png' );
+    saveas( gcf, fileSave );
 end
